@@ -9,6 +9,7 @@ class SitemapEntry
     public $lastmod;
     public $changefreq;
     public $priority;
+    public $images;
 
     public function __construct(string $loc, \DateTime $lastmod, ?string $changefreq = null, ?string $priority = null)
     {
@@ -17,5 +18,10 @@ class SitemapEntry
         $this->lastmod = $lastmod;
         $this->changefreq = $changefreq;
         $this->priority = $priority;
+    }
+    
+    public function setImages($images)
+    {
+        $this->images = $images;
     }
 }
